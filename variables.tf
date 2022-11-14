@@ -15,6 +15,10 @@ variable "subnet_id" {
 variable "tags-name" {
   type        = string
   description = "The name of the VM"
+  validation {
+    condition     = length(var.tags-name) > 8
+    error_message = "Must be a 32 character long API token."
+  }
 }
 
 variable "tags-descr" {
