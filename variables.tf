@@ -17,7 +17,7 @@ variable "tags-name" {
   description = "The name of the VM"
   validation {
     condition     = length(var.tags-name) > 12
-    error_message = "Must be a 32 character long API token."
+    error_message = "Must be a 12 character instance name"
   }
 }
 
