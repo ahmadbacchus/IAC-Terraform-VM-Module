@@ -8,7 +8,7 @@ resource "aws_instance" "app_server" {
   vpc_security_group_ids = var.vpc_security_group_ids
   subnet_id        = var.subnet_id
   tags = {
-    Name        = var.tags-name
+    Name        = lower(var.tags-name)
     Description = var.tags-descr
     Environment = var.tags-env
     Owner       = var.tags-owner
