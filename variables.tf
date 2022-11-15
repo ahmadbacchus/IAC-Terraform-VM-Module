@@ -16,7 +16,7 @@ variable "tags-name" {
   type        = string
   description = "The name of the VM"
   validation {
-    condition     = length(var.tags-name) > 12
+    condition     = length(var.tags-name) > 8
     error_message = "Must be a 12 character instance name"
   }
 }
@@ -24,6 +24,10 @@ variable "tags-name" {
 variable "tags-descr" {
   type        = string
   description = "The description of the VM"
+    validation {
+    condition     = length(var.tags-name) > 6
+    error_message = "Must be a 6 character long for the description"
+  }
 }
 
 variable "ami" {
