@@ -7,6 +7,7 @@ resource "aws_instance" "app_server" {
   instance_type          = var.instance_type
   vpc_security_group_ids = var.vpc_security_group_ids
   subnet_id        = var.subnet_id
+  user_data              = var.user_data
   key_name = var.key_name
   tags = {
     Name        = lower(var.tags-name)

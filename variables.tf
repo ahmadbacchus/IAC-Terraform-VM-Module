@@ -8,6 +8,11 @@ variable "key_name" {
   description = "The name of the Key Pair"
 }
 
+variable "user_data" {
+  type        = string
+  description = "The user data location"
+}
+
 variable "vpc_security_group_ids" {
   type        = list(string)
   description = "The description of the VM"
