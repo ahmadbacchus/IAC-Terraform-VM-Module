@@ -3,6 +3,11 @@ variable "instance_type" {
   description = "EC2 instance type"
 }
 
+variable "key_name" {
+  type        = string
+  description = "The name of the Key Pair"
+}
+
 variable "vpc_security_group_ids" {
   type        = list(string)
   description = "The description of the VM"
