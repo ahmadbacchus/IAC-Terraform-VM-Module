@@ -30,7 +30,7 @@ variable "tags-descr" {
   type        = string
   description = "The description of the VM"
     validation {
-    condition     = length(var.tags-name) > 6
+    condition     = length(var.tags-descr) > 6
     error_message = "Must be a 6 character long for the description"
   }
 }
